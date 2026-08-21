@@ -78,6 +78,3 @@ print('aa\nbb')
 print(r'aa\nbb')
 print('c:\a\abc.txt')
 print('c:\n\abc.txt')
-
-
-

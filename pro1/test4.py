@@ -19,6 +19,6 @@ print(re.findall(r'\D+',ss)) #\d 반대
 
 
 
-print(re.findall(r'\s',ss)) #공백, 탭
+print(re.findall(r'\s',ss)) #공백, 탭문자만 가지고옴
 print(re.findall(r'\s+',ss))
-print(re.findall(r'\S+',ss))
+print(re.findall(r'\S+',ss)) #반대

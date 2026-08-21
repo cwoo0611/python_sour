@@ -50,10 +50,3 @@ print((1,), type((1,)))
 print([1,], type([1,]))
 print({1,}, type({1,}))
 print({'key':3}, type({'key':3}))
-
-
-
-
-
-
-

@@ -157,7 +157,6 @@ def func():
 print (func())
 print('g:',g) #2   
 
-print("\n여기를뜨자")
 
 
 

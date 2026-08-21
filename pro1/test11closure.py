@@ -117,3 +117,5 @@ print(list(filter(lambda a:a % 2, range(10)))) #[1, 3, 5, 7, 9]
 
 #filter를 이용해 1~100 사이의 정수 중 5의 배수이거나 7의 배수만 출력(리스트)
 print(list(filter(lambda x:x % 5 == 0 or x % 7 == 0, range(101) )))
+
+#함수 장식자

@@ -13,8 +13,12 @@ def helloFunc():
 
 hi = make2(make1(helloFunc)) #decorator 없이 실행 (장식자)x
 print(hi()) #안녕반가워홍길동
+
+
 @make2
 @make1
 def helloFunc2():
     return '고길동'
-print(helloFunc2()) 
+print(helloFunc2()) #장식자 활용
+
+

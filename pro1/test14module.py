@@ -33,3 +33,12 @@ del calendar
 import random
 print(random.random())
 print(random.randrange(1,10))
+
+from random import random
+print(random())
+
+from random import randint, randrange, choice #일부 맴버만 로딩
+print(randrange(1,5))
+
+from random import * #전체 맴버를 로딩 (비권장)
+

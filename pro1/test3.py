@@ -124,3 +124,5 @@ del dic['번호'] #딕셔너리 값 삭제 방법
 print(dic)
 print(dic.keys())
 print(dic.values())
+
+

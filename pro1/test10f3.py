@@ -73,9 +73,6 @@ rdata = typeFunc('한개', [10,20,30])
 print(rdata)
 
 
-def zoo(a,b=1):
-    print(a,b)
-zoo(b=5,a=1)
 
 
 
