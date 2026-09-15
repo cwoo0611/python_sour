@@ -5,12 +5,12 @@
 
 # 단순한 HTTPServer 구축 - 기본적인 socket연결
 
-from http.server import SimpleHTTPRequestHandler,HTTPServer
+from http.server import SimpleHTTPRequestHandler,HTTPServer 
 
 PORT = 7777
 
 #get 요청에 대해 문서를 읽어 클라이언트로 전송하는 역할
-handler = SimpleHTTPRequestHandler
+handler = SimpleHTTPRequestHandler                 #파일을 읽어서 보내줌
 
 # HTTPServer 객체 생성
 serv = HTTPServer(('192.168.0.29',PORT),handler)
@@ -18,4 +18,4 @@ print('웹 서비스 시작...')
 
 serv.serve_forever() #무한 웹 서비스 진행
 
-# http:.//(ip주소):포트번호
+# http:.//(ip주소):포트번호 같은경로에 있기 때무네 뒤에 주소는 따로 적을 필요가없다
