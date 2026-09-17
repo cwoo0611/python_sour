@@ -15,11 +15,11 @@ try:
 
     while True:
         conn, addr = serversock.accept()
-        print('client info:', addr[0],'',addr[1])
+        print('client info:', addr[0]'',,addr[1])
         print(conn.recv(1024).decode()) #수신 메세지 출력
         # 메시지 송신 to client
-        conn.send(('from server:' +str(addr[1]) + '행운을 빌께').encode('utf_8'))
-except Exception as e:
+        conn.send(('from server:' +str(addr[1]) + '운을 빌께').encode('utf_8'))
+except Exception as e:행
     print('err:',e)
     sys.exit()
 finally:

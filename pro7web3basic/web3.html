@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>table tag(표)</h3>
+    <table border="5"> <!--w3c는 border="1"만 권장. 스타일은 css가 담당하도록 함-->
+        <tr>
+            <th>번호</th><th>이름</th><th>주소</th>  <!--th 태그는 bold,align:center가 기본값-->
+        </tr>
+        <tr>
+            <td> width="100"</td><td>신기해</td><td>강남구 서초1동</td>
+        </tr>
+         <tr>
+            <td>2</td><td></td><td></td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <td width = "200" colspan="2">a</td>   <!-- 열 병합-->
+            <td>b</td>
+            <td rowspan="2">c</td>      <!--행 병합-->
+        </tr>
+        <tr>
+            <td>  <!--하나의 td를 cell이라고 부른다 cell안에 table작성이 가능하다-->
+                <table border="3">
+                    <tr>
+                        <td>python</td>
+                        <td>mariaDB</td>
+                    </tr>
+                    <tr>
+                        <td>c</td>
+                        <td>java</td>
+                    </tr>
+                </table>
+            </td>
+            <td>kor</td>
+            <td>eng</td>
+        </tr>
+    </table>
+
+    <hr>
+    -- form tag(서버에 전달용 입력 양식 작성) --
+    <form action= "aa.py" method="get">
+        1.이름<input type="text" name="name" id="irum" size="30"><br>
+        2.나이<input type="text" name="age" value="23" readonly><br>
+        3.비밀번호:<input type="password" name="pwd"><br>
+        4.메시지:<textarea name="msg" cols="50" rows="5">멀티라인박스</textarea>
+        <br>
+        5.학년:
+        <input type="radio" name="hak" value="1">1학년&nbsp;
+        <input type="radio" name="hak" value="2" checked>2학년&nbsp;
+        <input type="radio" name="hak" value="3">3학년&nbsp;<br>
+        6성별:
+        <input type="radio" name="gender" value="남">남성&nbsp;
+        <input type="radio" name="gender" value="여" checked>여성&nbsp;
+        <br>
+        7.과목:
+        <input type="checkbox" name="gwa" value="python">파이썬&nbsp;
+        <input type="checkbox" name="gwa" value="java">자바&nbsp;
+        <input type="checkbox" name="gwa" value="c">사&nbsp;
+        <br>
+        8.지역:
+        <select name="addr">
+            <option value="c" selected>시청</option>
+            <option value="j">종로</option>
+            <option value="k">강남</option>
+        </select>
+        <br>
+        9.파일선택:<input type="file" name="fname"><br>
+        10. 숨김 : <input type="hidden" name="jumsu" value="90" >
+
+        <br><br>
+        <input type="submit" value="전송확인"/> <!--서버로 자료전송-->
+        <input type="reset" value="입력취소"/>  <!-- 입력취소-->
+
+    </form>
+</body>
+</html>

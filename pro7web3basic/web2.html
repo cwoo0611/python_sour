@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지와 링크</title>
+</head>
+<body>
+    이미지 삽입<br>
+    <img src="images/food.jpg" width="100" title="라면" alt="이미지 에러인경우 대체문자"/>
+    <br>
+    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm3BYQLPWEklft690jPZ4-LrCE-057VNCJnhhgc7a-6tRrrbV-lhkhk7wkLxzBr0OibKlS1IphEe8jcP4EgafT80LZgHjrkJK07mP3_1cBRfeYPcae_O4np_YDN_-yRXFMdm_8QQFs-LZeD=w92-h92-n-k-no"/>
+    <br>
+
+    <h3>** a tag(다른페이지나 주소로 이동하는 링크를 만듦) 연습 **</h3>
+    <!--<a href="이동할 주소 또는 파일">화면에 보일 글자(hyper text)</a>-->
+    <a href="web1.html">web1 문서보기</a><br>
+    <a href="web1.html"target="_new">web1 문서보기</a><br>
+    <a href="web1.html"target="_blank">web1 문서보기</a><br>
+    <a href="https://www.kbs.co.kr">kbs방송보기</a><br>
+    <a href="web1.html">
+        <img src="images/food.jpg" width="100" title="라면" alt="이미지 에러인경우 대체문자"/>
+
+    </a>
+    <br>
+    <a href="sample.txt">텍스트 문서보기:해석가능</a><br>
+    <a href="sample.dat">특수 문서보기:해석불가</a><br>     <!--다운로드-->
+
+    <a href="mailto:pykwon@hanmail.net">pyk 이메일</a><br>
+
+    <a href="kbs/sbs/aa.html">kbs/sbs/aa</a><br>
+    <a href="mbc/bb.html">bb 문서보기(상대경로)</a><br>
+    <a href="/pro7web3basic/mbc/bb.html">mbc/bb 문서(상대경로)</a><br>
+    <a href="http://127.0.0.1:5500/pro7web3basic/mbc/bb.html">mbc/문서(절대경로)</a><br>
+
+    <hr>
+    -- iframe 연습 --<br> 
+    <!-- 
+    frame : 웹브라우저 화면 영역에 html이 랜더링 되는 영역:1개만존재
+    iframe: frame 내에 sub frame을 만들수가 있다. - 한 화면에 여러개의 html 문서 표현이가능
+    -->
+    <iframe src="web1.html" width="50%" height="100" style="border:none" name="tiger" ></iframe>
+    <br><br>
+    <a href="https://www.daum.net" target="tiger">daum페이지</a><br>
+    <a href="https://www.korea.com" target="tiger">korea페이지</a><br>
+    <br><br>
+    작성자 : 홍길동
+</body>
+</html>

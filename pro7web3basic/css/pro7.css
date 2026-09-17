@@ -1,0 +1,12 @@
+/*여러개의 html 문서에서 스타일 적용 가능*/
+#myid2{
+    background-color: burlywood;
+    color: brown;
+    font-size: 20px ;
+}
+
+/*동적 선택자*/
+input:focus{background-color:yellow;}
+/*input:focus{background-color:#ffff00;}
+input:focus{background-color: rgb(255,255,0);}
+input:focus{background-color: rgb(217, 255, 0);}*?
