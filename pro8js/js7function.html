@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bb(){
+            document.write("안녕하세요");
+            cc(10); // 함수가 다른함수 호출가능( 반환값 무시)
+            cc(1, 2, 3); //파라미터 갯수가 일치하지 않아도 수행됨
+            let re = cc(5); //반환값 처리
+            document.write(`<br>re는 ${re}`);
+
+            dd(7,8);
+            dd(7,8,9);
+            dd(7);
+            dd();
+        }
+        
+        function cc(para){ // 매게변수가 있는 함수
+            let kk = para + 10;
+            document.write(`<br>kk는 ${kk}`);
+            return kk;
+        }
+
+        function dd(para1, para2){
+            document.write(`<br>dd 함수에서${para1} ${para2}`);
+        }
+
+        // 전역,지역변수
+        let a = 100; //전역변수
+        const b = 200; //전역상수
+        function func(){
+            let c = 300; //지역변수
+            const d = 400; //지역상수
+            document.write(`<br>a:${a} b:${b}`);
+            document.write(`<br>c:${c} d:${d}`);
+
+        }
+            </script>
+</head>
+<body>
+    <h3>함수(function) : 어떤 특별한 목적의 작업을 수행하도록 설계된 독립적 블럭{}을 의미</h3>
+<pre>
+필요할떄 호출하여 반복처리,자원의 재활용
+
+function 함수명(매게변수){
+    실행문;
+    return 반환값;
+
+}
+
+
+</pre>
+<script>
+    //내장함수 : js가 기본지원
+    let str = "java";
+    document.write(str);
+    document.write(`<br>str.charAt(2): ${str.charAt(2)}`);
+    document.write(`<br>str.bold: ${str.bold()}`);
+    document.write(`<br>Math.abs(-7): ${Math.abs(-7)}`);
+
+
+</script>
+<hr>
+사용자 정의 함수<br>
+<script>
+    let count = 0;
+    function aa(){ //함수를 선언
+        count +=1;
+    document.write(count + "번 수행<br>");
+    }
+
+    aa();  //함수실행
+    document.write("뭔가를 하다가...<br>");
+    aa(); //다시 함수 실행
+    document.write("함수는 참조형 타입:", typeof(aa));
+
+</script>
+<div>오늘은 금요일:지인과 한잔 떙기기에 적당한 날</div>
+<script>
+    aa();
+</script>
+<hr>
+<div><b> 생각의 전환 :</b> html 선언부에 js 코드(함수)를 작성후 함수 호출
+</div>
+<script>
+    bb();
+</script>
+
+<hr>
+<script>
+    document.write("<br>전역, 지역 변수의 이해");
+    func();
+    //document.write(`<br>c:${c} d:${d}`);// 오류
+</script>
+
+</body>
+</html>   
