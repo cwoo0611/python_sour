@@ -9,4 +9,14 @@
 input:focus{background-color:yellow;}
 /*input:focus{background-color:#ffff00;}
 input:focus{background-color: rgb(255,255,0);}
-input:focus{background-color: rgb(217, 255, 0);}*?
+input:focus{background-color: rgb(217, 255, 0);}*/
+
+a:link{text-decoration:none;}
+a:hover{color: yellow; font-size: 30px;}
+
+/*--부모,자식,자손,클래스,아이디 선택*/
+b{font-size: 8px;}
+div b{font-size:16px;} /*div tag 자손들 모두 해당*/
+div > b{font-size: 20px;color: blue;} /*div tag의 직계자식만 포함*/
+div b#hi {font-size: 30px;}
+div b.hello{font-size:50px;}

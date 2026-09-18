@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>변수 연습</h2>
+    <script>
+        //기본형(원시타입)변수
+        //var aa;     //전통적인(옛날방식) 변수 선언 방식. 함수 단위 선언. 같은 이름으로 재선언 가능
+        let aa;        //모던한 변수 선언 방식. EcmaScript 형식을 따른다. 블록단위. 같은이름으로 재선언 불가
+        aa = 100
+        let bb = 20.5;
+        const cc = 300; //상수 선언.값 수저불가
+        //cc = cc + 10; //err:수정안됨
+        let dd = false //boolean 값
+        let msg = "변수 선언 이해";
+        document.write(aa," ",bb,"",cc,"",dd,"",msg);
+        document.write("<br>")
+        document.write("type확인:",typeof(aa)," ",typeof(bb)," ",typeof(dd)," ",typeof(msg));
+        document.write("<br>")
+        document.write("type확인:",typeof(1)," ",typeof(-1.5)," ",typeof(true)," ",typeof(안녕)," ",typeof(null)," ",typeof(undefined));
+    
+        document.write("<br>")
+        //참조형(참조타일)변수
+        let kbs = {name:"kbs방송"}
+        let mbc = 'kbs';   //주소를 치환
+        document.write(kbs.name," ", mbc.name);
+
+        document.write("<br>");
+        { //변수 scope 자바스크립트 중괄호는 독립영역을 선언하는것이다
+          let v1=1
+          var kk=50
+          document.write(v1," ",kk)
+          {
+                let v2 = 2;
+                document.write("<br>",v2," ",kk)
+                {
+                     let v3 = 3; //현재 영여겡서만 유효 - 지역변수
+                     document.write("<br>",v3," ",kk);
+                     document.write("<br>",v1," ",v2);
+                }
+                // document.write("<br>",v3); //err:v3 영역밖에서 호출불가
+          } 
+          document.write("<br>",kk); //err:v3 영역밖에서 호출불가
+        }
+    </script>
+        <h2>js연산자</h2>
+    <script>
+        let x = 5,y = 2;
+        document.write(x," ",y);
+        document.write("<br>산술 연산:",x + y," ",x/y," ",x%y);
+        document.write("<br>관계(비교) 연산:",x>y," ",x <= y," ",x == y," ",x != y );
+        document.write("<br>논리 연산(&&:and,||or):", x >y && x<=y);
+        document.write("<br>삼항연산:",(x>y)?1000:2+4);
+
+        //연산자 우선 순위는 py가 동일
+        document.write("<br>","a" + "b")
+
+        let e, n, g;
+        e = n = g = 6+5;    //할당 연산 체이닝
+         document.write("<br>",e,n,g)
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>반복문 for(초기값;조건;증가값)</h2>
+    <script>
+        // for(let a =1;a <=5; a=a+1){
+        //    for(let a =1;a <=5; a+=1)
+        let a = 1;
+        for(let a =1;a <=5; ++a)
+            {document.write("a 값은"+a+"<br>");
+
+
+        }
+        document.write("for 블럭 수행후 a 값은"+a+"<br>");
+
+        document.write("<br>br>")
+        for(let a = 3; a < 11; a+=2){ //증가치가 2
+            document.write("a 값은"+a+"<br>");
+        }
+
+        document.write("<br>br>")
+        for(let a = 5; a >= 1; a--){ //하나씩 줄어든다
+            document.write("a 값은"+a+"<br>");
+        }
+
+        document.write("<br>br>")
+        document.write("<br>다중for<br>")
+         for(let i = 1; i <= 3; i++){
+            document.write("i 값은 ==>"+i+"<br>");
+             for(let j = 1; j <= 4; j++){
+             
+            document.write("j 값은 ==>"+j+"&nbsp;");
+             }
+            document.write("<br>")
+         }
+
+         document.write("<br>1~10까지의 정수의 합<br>");
+         let hap = 0; //누적 기억 장소는 초기화
+         for(let su = 1;su < 11; su++){
+            hap = hap + su; //hap += su
+         }
+         document.write(hap);
+
+        document.write("<br>1~100까지의 정수 중 2의 배수이나 5의 배수가 아닌 수의 합<br>");
+        document.write(10 == "10"); //true
+        document.write(10 === "10"); //flase
+        let sum = 0;
+        for(let i = 1;i<=100; i++){
+            //if(i%2==0 && i%5 !=0)
+            if(i%2===0 && i%5 !==0){
+                sum += i;
+            }
+            
+          }
+          document.write("합계:" + sum + "<br>");
+
+          document.write("<table border='1'>");
+          for(let a = 2; a<10; a++){
+            document.write("<tr>");
+            for(let b = 1; b<10; b++){
+                //document.write("<td>");
+                //document.write(a+ "*" +b+ "=" + a*b);
+               // document.write("</td>");
+               document.write(`<td>${a}*${b}=${a*b} </td>`);
+            }
+            document.write("</tr>");
+          }
+          document.write("</table>");
+        
+    </script>
+
+</body>
