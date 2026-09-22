@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = () => {
+            document.querySelector('#btnGet').onclick = getFunc;
+            document.querySelector('#btnPost').onclick = postFunc;
+        }
+
+        let xhr;
+
+        // GET 방식
+        function getFunc() {
+            const irum = frm.name.value;
+            const nai = frm.age.value;
+
+            xhr = new XMLHttpRequest();
+
+            let fname = "js18.py?irum=" + irum + "&nai=" + nai;
+
+            xhr.open("GET", fname, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    process1();
+                }
+            }
+
+            xhr.send();
+        }
+
+        // GET 결과 처리
+        function process1() {
+            document.querySelector("#show").innerText = xhr.responseText;
+        }
+
+
+        // POST 방식
+        function postFunc() { //현재 실습 불가 - live서버를 쓰기때문에
+            const irum = frm.name.value;
+            const nai = frm.age.value;
+
+            xhr = new XMLHttpRequest();
+
+            let fname = "js18.py";
+
+            xhr.open("POST", fname, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    process2();
+                }
+            }
+
+            xhr.setRequestHeader(
+                "Content-Type",
+                "application/x-www-form-urlencoded"
+            );
+
+            xhr.send("irum=" + irum + "&nai=" + nai);
+        }
+
+        // POST 결과 처리
+        function process2() {
+            document.querySelector("#show").innerText = xhr.responseText;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>ajax 이해</h2>
+
+    <form name="frm">
+
+        이름:
+        <input type="text" name="name" value="tom">
+        <br>
+
+        나이:
+        <input type="text" name="age" value="33">
+        <br>
+
+        <input type="button" value="get 방식" id="btnGet">
+        <input type="button" value="post 방식" id="btnPost">
+
+    </form>
+
+    <hr>
+
+    <div id="show"></div>
+
+</body>
+</html>
