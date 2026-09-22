@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script>
+        function func1(){
+            document.getElementById("show").innerHTML = "<i>전통적인 이벤트처리</i>"  } //HTML이라 tag가 작동됨
+
+        let a =10;
+        let b = {
+            funcNew1:function(){
+                document.getElementById("show").innerHTML = "b객체의 메소드 처리";
+                
+            },
+            funcNew2:function(){
+                document.getElementById("show").innerHTML = "<h1>b객체의 메소드 처리</h1>";
+                
+            }
+
+        }
+        //일반 변수 선언하듯이 함수도 객체로 선언할수 있다
+    </script>
+    <script>
+        //window.onload:
+        //HTML 문서와 이미지,CSS같은 페이지 리소스가 모두 로딩된후 자동 발생 이벤트
+        //window.onload = alert("ok"); //요청 로딩이 발생하면 알람이 간다
+        window.onload = function(){ //이름이 없는 함수- 1회용으로 사용
+            //alert("good");
+            const exBtn1 = document.getElementById("btn1"); //특정 id를 가진 버튼을 읽어 변수에 저장
+            /*
+            exBtn1.onclick = function(){        //이벤트 장착
+                document.getElementById("show").innerHTML = "클릭1 선택";
+            }
+            */
+           exBtn1.onclick = bt1Func;  //bt1Func이라는 함수를 호출한다 
+           
+           const exbtn2 = document.getElementsByName("myBtn") // name 지적.중복이 가능하므로 배열에 기억
+           console.log(exbtn2.length);
+           exbtn2[0].onclick = function(){
+                document.getElementById("show").innerHTML = "클릭2 누름";
+           }
+            exbtn2[1].onclick = function(){
+                document.getElementById("show").innerHTML = "클릭3 누르다니";
+           }
+           
+           const exBtn4 = document.getElementsByTagName("button")[3];  //태그 이름으로 가져오기 중복이있으므로 배열을 줘야함
+           exBtn4.onclick = function(){
+           document.getElementById("show").innerHTML = "클릭4 선택";
+           }
+
+           // 이벤트 연결 및 해재
+           // addEventListener("이벤트 종류",핸들러 함수)
+           document.getElementById("btn5").addEventListener("click",abcFunc); //이벤트 연결 addEvent를 통해서 btn5번에다가 event를 장착한다.
+
+
+        }
+
+        function bt1Func(){
+            document.getElementById("show").innerHTML = "클릭1 선택 와우";
+        }
+
+        function abcFunc(){
+            //alert("abc");
+            document.getElementById("show").innerHTML = "클릭5 이벤트 연결처리";
+
+            document.getElementById("btn5").removeEventListener("click",abcFunc) //addEventListener 로 이벤트를 장착한거를 removeEventListener징칙힌거를 해제햐쥰더.
+        }
+    </script>
+</head>
+<body>
+<h2>이벤트 처리: 이벤트 핸들러 연결</h2>
+<input type="button" value="버튼1" onclick="func1()"><br>
+<input type="button" value="버튼2" onclick="b.funcNew1()"><br>    
+<input type="button" value="버튼3" onclick="b.funcNew2()"><br>
+<hr>
+<!--
+<button id ="btn1" onclick="이벤트처리함수()">라벨</button> 이건 html 내에 js 기술 w3c는 비권장
+-->
+<button id="btn1">클릭1</button><br>
+<button id="btn2" name="myBtn">클릭2</button><br>
+<button id="btn3" name="myBtn">클릭3</button><br>
+<button id="btn4">클릭4</button><br>
+<button id="btn5">클릭5</button><br>
+
+<div id="show"></div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.onload = function(){};
+        window.onload = () => {
+            //alert("a");
+            document.getElementById("colorW").onclick = function(){
+                document.body.style.backgroundColor = "white";
+            }
+            document.getElementById("colorG").onclick = function(){
+                document.body.style.backgroundColor = "#00ff00"; 
+            }
+            document.getElementById("colorR").onclick = function(){
+                //document.bgColor = "rgb(255,0,0)"; //rgb(100%,0%,0%)
+                document.body.style.backgroundColor = "rgb(255,0,0)";    //이런식으로도 줄수 있다
+            }
+
+            //이벤트 종류 경험
+            document.querySelector(".hello").onclick = () => {
+                document.querySelector('#show').innerText = "안녕하세요";
+            }
+            document.querySelector("#calc").ondblclick = () => {
+                let ss = `연산 결과는 ${10+20}`;
+                document.querySelector("#show").innerText = ss;
+            }
+            document.querySelector("#name").onmouseover = () => {
+                document.querySelector("#show").innerHTML = "<h2>난 홍길동</h2>"; //마우스 포인트를 올려놓으면 뜬다
+            }
+            document.querySelector("#name").onmouseout = () => {
+                document.querySelector("#show").innerHTML = "";       //마우스 포인트를 떄면 사라진다 글자가
+            }
+
+            //a tag:click 이벤트가 기본장착됨
+            document.querySelector("#daum").onclick = function(event){  //이벤트 관련 정보에 접근이 가능
+                event.preventDefault(); //해당 태그의 고유 기능(a tag, submit, reset ..) 삭제
+                console.log(event);
+                document.title = "새로운 제목"; //원래 고유의 기능을 버리고 새로운 제목을 title이라고 작성하는 문으로 바뀐다
+            }
+
+            //select
+            const sdata = document.querySelector("#sel");
+            /*
+            sdata.onclick = function(){     //항목 선택시 click 이벤트 발생
+                document.querySelector("#show").innerHTML = sdata.value;
+                console.log(sdata.value);
+            }
+            */
+            sdata.onchange = function(){     //항목 선택시 change 이벤트 발생 값에 변화가 있지 않는한 값이 변경하지 않는다 보통 select 에서는 이걸 많이씀
+                document.querySelector("#show").innerHTML = sdata.value;
+                console.log(sdata.value);
+            }
+        };
+    </script>
+</head>
+<body>
+* 여러 이벤트 경험하기 *<br>
+<input type="button" value="흰색" id="colorW">
+<!--
+<input type="button" value="녹색" id="colorG">
+<input type="button" value="적색" id="colorR">
+-->
+<span id="colorG"> 녹색 </span> 
+<b id="colorR" style="border: 2px solid black; cursor: pointer;"> 적색 </b>   
+<!-- 위에 주석처리하거랑 비슷하다 꼭 버튼이 아니어도된다 모양을 꾸며도 된다. -->
+<hr>
+<h2>이벤트 종류 경험하기</h2>
+<button id="hello" class="hello">인사하기(click)</button>
+<button id="calc">계산하기(dbclick)</button>
+<button id="name">이름확인(mouseover)</button>
+
+<br>
+<a href="https://m.daum.net" id="daum">앵커 태그 클릭</a> <!-- m.은 모바일-->
+<br>
+<select id="sel">
+    <option value="프로그래머">프로그래머</option>
+    <option value="웹퍼블리셔">웹퍼블리셔</option>
+    <option value="프로게이머">프로게이머</option>
+</select>
+
+<hr>
+<div id="show">출력장소</div>
+
+</body>
+</html>
