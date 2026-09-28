@@ -1,0 +1,17 @@
+{%extends "base.html"%} <!--상속-->
+
+{% block title %}메인{% endblock %}
+
+{% block content %}
+<h3>조건 처리연습</h3>
+
+    {% if score >=90 %}
+        <p style="color: blue;">성적 : {{score}} -> a 등급</p>
+    {% elif score >= 80 %}
+        <p style="color: brown;">성적 : {{score}} -> b 등급</p>
+    {% else %}
+        <p style="color: rgb(46, 60, 192);">성적 : {{score}} -> c 등급</p>
+
+    {% endif %}
+
+{% endblock %}
