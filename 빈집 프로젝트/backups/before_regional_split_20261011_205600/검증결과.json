@@ -1,0 +1,15 @@
+{
+  "tables": {
+    "regions": 2,
+    "vacant_houses": 896,
+    "users": 0,
+    "saved_houses": 0,
+    "saved_house_business_types": 0
+  },
+  "integrity": "ok",
+  "foreign_keys": "ok",
+  "constraint_tests": "passed",
+  "cascade_delete": "passed",
+  "sql_restore": "passed",
+  "backup": "C:\\works\\projects\\빈집 프로젝트\\backups\\before_simplification_20261011_204305"
+}

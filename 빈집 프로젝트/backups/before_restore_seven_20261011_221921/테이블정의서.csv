@@ -1,0 +1,51 @@
+﻿테이블,컬럼,자료형,키,참조,필수,설명
+buildings,id,INTEGER,PK,,예,번호
+buildings,region_id,INTEGER,FK,regions.id,예,지역 번호
+buildings,source_ufid,TEXT,UK,,예,브이월드 건물 식별번호
+buildings,parcel_code,TEXT,,,아니오,필지번호 PNU
+buildings,building_register_id,TEXT,,,아니오,건축물대장 식별번호
+buildings,ground_floors,INTEGER,,,아니오,지상 층수
+buildings,underground_floors,INTEGER,,,아니오,지하 층수
+buildings,building_area_m2,NUMERIC,,,아니오,건축면적 제곱미터
+buildings,total_floor_area_m2,NUMERIC,,,아니오,연면적 제곱미터
+buildings,approval_date_raw,TEXT,,,아니오,사용승인일 원본
+buildings,geometry_geojson,TEXT,,,예,건물 윤곽 좌표 EPSG4326 GeoJSON
+buildings,fetched_at,TEXT,,,예,수집 시각 UTC
+gochang_house_details,house_id,INTEGER,"PK,FK",vacant_houses.id,예,빈집 번호
+gochang_house_details,house_type,TEXT,,,아니오,주택 유형
+gochang_house_details,built_year,INTEGER,,,아니오,준공 연도
+gochang_house_details,land_area_m2,NUMERIC,,,아니오,대지면적
+gochang_house_details,land_use_zone,TEXT,,,아니오,용도지역
+gochang_house_details,road_access,TEXT,,,아니오,도로접면
+house_building_links,house_id,INTEGER,"PK,FK",vacant_houses.id,예,빈집 번호
+house_building_links,building_id,INTEGER,"PK,FK",buildings.id,예,건물 번호
+house_building_links,evidence,TEXT,,,예,연결 확인 근거
+house_building_links,verified_at,TEXT,,,예,연결 확인 시각
+regions,id,INTEGER,PK,,예,번호
+regions,name,TEXT,,,예,지역 이름
+saved_house_business_types,saved_house_id,INTEGER,"PK,FK",saved_houses.id,예,관심 저장 번호
+saved_house_business_types,business_type,TEXT,PK,,예,희망 업종
+saved_houses,id,INTEGER,PK,,예,번호
+saved_houses,user_id,INTEGER,FK,users.id,예,회원 번호
+saved_houses,house_id,INTEGER,FK,vacant_houses.id,예,빈집 번호
+saved_houses,memo,TEXT,,,아니오,메모
+saved_houses,rating,INTEGER,,,아니오,별점
+saved_houses,created_at,TEXT,,,예,생성 시각
+saved_houses,updated_at,TEXT,,,예,수정 시각
+users,id,INTEGER,PK,,예,번호
+users,email,TEXT,,,예,이메일
+users,password_hash,TEXT,,,예,비밀번호 해시
+users,display_name,TEXT,,,예,이름
+users,created_at,TEXT,,,예,생성 시각
+vacant_houses,id,INTEGER,PK,,예,번호
+vacant_houses,region_id,INTEGER,FK,regions.id,예,지역 번호
+vacant_houses,address_public,TEXT,,,예,공개 주소
+vacant_houses,grade,INTEGER,,,아니오,등급
+vacant_houses,structure,TEXT,,,아니오,구조
+vacant_houses,total_floor_area_m2,NUMERIC,,,아니오,연면적
+vacant_houses,data_reference_period,TEXT,,,아니오,자료 기준 시점
+vacant_houses,source_file,TEXT,,,예,원본 파일
+vacant_houses,source_row_number,INTEGER,,,예,원본 데이터 행 번호
+yangsan_house_details,house_id,INTEGER,"PK,FK",vacant_houses.id,예,빈집 번호
+yangsan_house_details,contact_agency,TEXT,,,아니오,문의 기관
+yangsan_house_details,contact_phone,TEXT,,,아니오,문의 전화

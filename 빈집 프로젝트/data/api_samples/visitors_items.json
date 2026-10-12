@@ -1,0 +1,52 @@
+[
+  {
+    "signguCode": "11110",
+    "signguNm": "종로구",
+    "daywkDivCd": "3",
+    "daywkDivNm": "수요일",
+    "touDivCd": "1",
+    "touDivNm": "현지인(a)",
+    "touNum": "100037.0",
+    "baseYmd": "20250101"
+  },
+  {
+    "signguCode": "11110",
+    "signguNm": "종로구",
+    "daywkDivCd": "3",
+    "daywkDivNm": "수요일",
+    "touDivCd": "2",
+    "touDivNm": "외지인(b)",
+    "touNum": "283545.5",
+    "baseYmd": "20250101"
+  },
+  {
+    "signguCode": "11110",
+    "signguNm": "종로구",
+    "daywkDivCd": "3",
+    "daywkDivNm": "수요일",
+    "touDivCd": "3",
+    "touDivNm": "외국인(c)",
+    "touNum": "30039.58",
+    "baseYmd": "20250101"
+  },
+  {
+    "signguCode": "11140",
+    "signguNm": "중구",
+    "daywkDivCd": "3",
+    "daywkDivNm": "수요일",
+    "touDivCd": "1",
+    "touDivNm": "현지인(a)",
+    "touNum": "76429.5",
+    "baseYmd": "20250101"
+  },
+  {
+    "signguCode": "11140",
+    "signguNm": "중구",
+    "daywkDivCd": "3",
+    "daywkDivNm": "수요일",
+    "touDivCd": "2",
+    "touDivNm": "외지인(b)",
+    "touNum": "261775.5",
+    "baseYmd": "20250101"
+  }
+]

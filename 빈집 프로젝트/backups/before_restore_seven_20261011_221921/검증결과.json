@@ -1,0 +1,21 @@
+{
+  "table_counts": {
+    "buildings": 5,
+    "gochang_house_details": 736,
+    "house_building_links": 0,
+    "regions": 2,
+    "saved_house_business_types": 0,
+    "saved_houses": 0,
+    "users": 0,
+    "vacant_houses": 896,
+    "yangsan_house_details": 160
+  },
+  "integrity_check": "ok",
+  "foreign_key_check": [],
+  "all_existing_values_preserved": true,
+  "dump_restore_verified": true,
+  "invalid_links_rejected": 3,
+  "geometry_crs": "EPSG:4326",
+  "unverified_house_links_created": 0,
+  "backup": "C:\\works\\projects\\빈집 프로젝트\\backups\\before_buildings_20261011_214955"
+}

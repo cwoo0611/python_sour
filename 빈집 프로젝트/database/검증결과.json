@@ -1,0 +1,19 @@
+{
+  "tables": {
+    "regions": 2,
+    "vacant_houses": 896,
+    "gochang_house_details": 736,
+    "yangsan_house_details": 160,
+    "users": 0,
+    "saved_houses": 0,
+    "saved_house_business_types": 0
+  },
+  "integrity": "ok",
+  "foreign_keys": "ok",
+  "constraint_tests": "passed",
+  "cascade_delete": "passed",
+  "sql_restore": "passed",
+  "all_house_values_preserved": true,
+  "regional_details_disjoint": true,
+  "backup": "C:\\works\\projects\\빈집 프로젝트\\backups\\before_regional_split_20261011_205600"
+}

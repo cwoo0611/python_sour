@@ -1,0 +1,21 @@
+{
+  "tables": {
+    "data_sources": 6,
+    "raw_records": 1468,
+    "regions": 4,
+    "vacant_houses": 896,
+    "building_registers": 5,
+    "house_building_links": 0,
+    "commercial_stores": 5,
+    "construction_notices": 5,
+    "regional_visitor_stats": 5,
+    "users": 0,
+    "saved_houses": 0,
+    "business_types": 6,
+    "saved_house_business_types": 0
+  },
+  "integrity": "ok",
+  "foreign_keys": "ok",
+  "constraint_tests": "passed",
+  "house_building_links": 0
+}

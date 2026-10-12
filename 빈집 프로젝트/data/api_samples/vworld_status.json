@@ -1,0 +1,40 @@
+{
+  "http_status": 200,
+  "count": 5,
+  "geometry_types": [
+    "MultiPolygon",
+    "MultiPolygon",
+    "MultiPolygon",
+    "MultiPolygon",
+    "MultiPolygon"
+  ],
+  "property_fields": [
+    "ufid",
+    "bld_nm",
+    "dong_nm",
+    "grnd_flr",
+    "ugrnd_flr",
+    "pnu",
+    "archarea",
+    "totalarea",
+    "platarea",
+    "height",
+    "strct_cd",
+    "usability",
+    "bc_rat",
+    "vl_rat",
+    "bldrgst_pk",
+    "useapr_day",
+    "regist_day",
+    "gb_cd",
+    "viol_bd_yn",
+    "geoidn",
+    "bldg_pnu",
+    "bldg_pnu_y",
+    "bld_unlice",
+    "bd_mgt_sn",
+    "sgg_oid",
+    "col_adm_se"
+  ],
+  "response_summary": null
+}

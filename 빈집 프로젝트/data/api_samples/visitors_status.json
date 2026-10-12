@@ -1,0 +1,19 @@
+{
+  "name": "visitors",
+  "endpoint": "https://apis.data.go.kr/B551011/DataLabService/locgoRegnVisitrDDList",
+  "parameters": {
+    "startYmd": "20250101",
+    "endYmd": "20250101",
+    "MobileOS": "ETC",
+    "MobileApp": "VacantHouseProject",
+    "pageNo": 1,
+    "numOfRows": 5,
+    "_type": "json"
+  },
+  "http_status": 200,
+  "status": "SUCCESS",
+  "result_code": "0000",
+  "message": "OK",
+  "total_count": 792,
+  "count": 5
+}
